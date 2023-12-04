@@ -1,0 +1,131 @@
+############### Blackjack Project #####################
+
+import random
+from replit import clear
+from art import logo
+
+print(logo)
+play_again = input("Welcome!  Would you like to play a game of blackjack?  Type y or n:")
+
+
+def deal_card(card_list, ongoing_hand):
+    card = (random.choice(card_list))
+    ongoing_hand.append(card)
+
+cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+
+user_cards = []
+computer_cards = []
+is_game_over = False
+
+user_deal_1 = deal_card(cards, user_cards)
+user_deal_2 = deal_card(cards, user_cards)
+
+comp_deal_1 = deal_card(cards, computer_cards)
+comp_deal_2 = deal_card(cards, computer_cards)
+
+print(f"Computer's first card: [{computer_cards[1]}]")
+print(f"Your cards: {user_cards}")
+
+
+def restart (list1, list2):
+  again = input("Would you like to play again?  Type y or n:")
+  if again == "y":
+    print (sum(list1))
+    print (sum(list2))
+    clear ()
+    print (logo)
+    list1.clear()
+    list2.clear()
+    deal_card(cards, user_cards)
+    deal_card(cards, user_cards)
+    deal_card(cards, computer_cards)
+    deal_card(cards, computer_cards)
+    print(f"Computer's first card: [{computer_cards[1]}]")
+    print(f"Your cards: {user_cards}")
+    calculate_score(user_cards, computer_cards)
+  else:
+    print ("Bye for now!")
+
+
+def calculate_score (inputlist, inputlist2):
+  """ a way to calculate score of user cards"""
+  total_score = sum(inputlist)
+  total_score2= sum(inputlist2)
+  if total_score2 == 21 and len(inputlist2) == 2:
+      print ("Computer has BlackJack!  You Lose :(")
+      restart (user_cards, computer_cards)
+  elif total_score == 21: 
+    print("You Got Blackjack! game over")
+    restart (user_cards, computer_cards)
+  elif total_score > 21:
+      if 11 in inputlist and total_score > 21:
+        inputlist.remove(11)
+        inputlist.append (1)
+        print (f"Let's turn your Ace into a 1.  Your new hand: {inputlist}")
+        calculate_score(user_cards, computer_cards)
+      else:
+        print("game over!  You went over 21 :(")
+        restart (user_cards, computer_cards)
+  else:
+      play_again = (input("Would you like another card? Type y or n:"))
+      if play_again == "y":
+          deal_card(cards, user_cards)
+          print (inputlist)
+          calculate_score(user_cards, computer_cards)
+      else:
+          calculate_score_computer(computer_cards)
+
+
+usercards_finalscore = (sum(user_cards))
+compcards_finalscore = (sum(computer_cards))
+
+
+def compare (list1, list2):
+  score1 = sum(list1)
+  score2 = sum(list2)
+  if score1 == score2:
+      print ("It's a draw!")
+  elif score1 > score2:
+      print ("You WIN!")
+      print (f"Your score: {score1}")
+      print (f"Computer score: {score2}")
+      print (f"Your hand: {user_cards}")
+      print (f"Computer's hand: {computer_cards}")
+  else:
+      print ("Computer wins this one!")
+  restart(user_cards, computer_cards)
+
+
+def calculate_score_computer (inputlistcomp):
+  total_scorecomp = sum(inputlistcomp)
+  if total_scorecomp == 21:
+      print (inputlistcomp)
+      print("Computer has BlackJack! YOU LOSE! game over")
+      restart (user_cards, computer_cards)
+  elif total_scorecomp <17:
+      deal_card(cards, computer_cards)
+      total_scorecomp = sum(inputlistcomp)
+      calculate_score_computer (inputlistcomp)
+  elif total_scorecomp <21 and total_scorecomp >=17:
+      print (f"Computer's Hand: {inputlistcomp}")
+      compare (user_cards, computer_cards)
+  else:
+      if total_scorecomp >21:
+          if 11 in inputlistcomp and total_scorecomp > 21:
+            inputlistcomp.remove(11)
+            inputlistcomp.append (1)
+            total_scorecomp = sum(inputlistcomp)
+            print (f"Computer's Hand: {inputlistcomp}")
+            calculate_score_computer (inputlistcomp)
+          else:
+            print (f"Computer's Hand: {inputlistcomp}")
+            print ("Computer Busted!  You Win!")
+            restart (user_cards, computer_cards)
+         
+        
+calculate_score(user_cards, computer_cards)
+
+
+
+  
