@@ -1,0 +1,50 @@
+import random
+from random import randint
+secret_number = randint(1,100)
+#print (secret_number)
+counter = 10
+
+def checknum(func_target, func_guess, func_counter):
+  if func_counter > 1:
+    if int(func_target) > int(func_guess):
+      print ("Too low.")
+      print ("Guess again.\n")
+      func_counter2 = int(func_counter)-1 
+      print (f"You have {func_counter2} attempts remaining to guess the number.")
+      next_guess =(input ("Make another guess:"))
+      checknum (secret_number, next_guess, func_counter2)
+    elif int(func_target) < int(func_guess):
+      print ("Too High.")
+      print ("Guess again.\n")
+      func_counter2 = int(func_counter)-1
+      print (f"You have {func_counter2} attempts remaining to guess the number.")
+      next_guess = (input("Make another guess:"))
+      checknum (secret_number, next_guess, func_counter2)
+    else:
+        print ("You guessed the right number!  You WIN!")
+  else:
+      print ("You are out of attempts and did not guess the number! Game Over!")
+      return
+print ("""d888888b db   db d88888b     d8b   db db    db .88b  d88. d8888b. d88888b d8888b.      d888b   .d8b.  .88b  d88. d88888b 
+`~~88~~' 88   88 88'         888o  88 88    88 88'YbdP`88 88  `8D 88'     88  `8D     88' Y8b d8' `8b 88'YbdP`88 88'     
+   88    88ooo88 88ooooo     88V8o 88 88    88 88  88  88 88oooY' 88ooooo 88oobY'     88      88ooo88 88  88  88 88ooooo 
+   88    88~~~88 88~~~~~     88 V8o88 88    88 88  88  88 88~~~b. 88~~~~~ 88`8b       88  ooo 88~~~88 88  88  88 88~~~~~ 
+   88    88   88 88.         88  V888 88b  d88 88  88  88 88   8D 88.     88 `88.     88. ~8~ 88   88 88  88  88 88.     
+   YP    YP   YP Y88888P     VP   V8P ~Y8888P' YP  YP  YP Y8888P' Y88888P 88   YD      Y888P  YP   YP YP  YP  YP Y88888P""")  
+
+
+
+print ("\n\nWelcome to the Number Guessing Game!")
+print ("I am thinking of a number between 1 and 100.")
+diff = (input("Choose a difficulty.  Type 'easy' or 'hard':"))
+if diff == "easy":
+    print (f"You have {counter} attempts remaining to guess the number.")
+    guess = input ("Make a guess:")
+    int(guess)
+    checknum (secret_number, guess, counter)
+if diff == "hard":
+  counter = counter - 5
+  print (f"You have {counter} attempts remaining to guess the number.")
+  guess = input ("Make a guess:")
+  int(guess)
+  checknum (secret_number, guess, counter)
