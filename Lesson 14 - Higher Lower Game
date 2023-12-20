@@ -1,0 +1,49 @@
+import random
+
+from game_data import data
+from art import logo
+from art import vs
+from replit import clear
+
+print (logo) 
+
+def more_followers (pick_a, pick_b):
+  number_a = pick_a ["follower_count"]
+  number_b = pick_b ["follower_count"]
+  if number_a > number_b:
+    return ("A")
+  else:
+    return ("B")
+    
+score = 0
+
+def list_pick_and_nick (list_name):
+    random_pick = (random.choice(list_name))
+    name = random_pick["name"]
+    description = random_pick["description"]
+    country = random_pick ["country"]
+    print (f"Compare A: {name}, a {description}, from {country}.")
+    list_name.remove(random_pick)
+    random_pickb = (random.choice(list_name))
+    nameb = random_pickb["name"]
+    descriptionb = random_pickb["description"]
+    countryb = random_pickb ["country"]
+    print (vs) 
+    print (f"Compare B: {nameb}, a {descriptionb}, from {countryb}.")
+    list_name.remove(random_pickb)
+    answer = input ("Who has more followers?  Type 'A' or 'B':  ").lower()
+    the_winner = more_followers (random_pick, random_pickb) 
+    if the_winner == answer:
+        global score 
+        score = score +1
+        print (f"You got it right!  Current score: {score}")
+        if  len(data) > 0:
+            list_pick_and_nick (data)
+        else:
+          print ("You have beat the game!")
+    else:
+      print (f"You got it wrong!  Final score: {score}")
+      return
+
+
+list_pick_and_nick (data)
