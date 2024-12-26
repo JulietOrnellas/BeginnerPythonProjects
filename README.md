@@ -37,6 +37,14 @@ A bidding system that stores bids, allows multiple participants, and determines 
 
 
 
+## How to Run
+
+1. Clone the repository.
+2. Run the respective `.py` file in Python.
+
+Example:
+```bash
+python guess_the_number.py
 
 
 
