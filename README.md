@@ -9,7 +9,6 @@ A collection of beginner Python projects I worked on while learning the language
 - [Guess the Number Game](#guess-the-number-game)
 - [Higher Lower Game](#higher-lower-game)
 - [Coffee Machine](#coffee-machine)
-- [Blind Auction](#blind-auction)
 - [Leap Years and Days in Month Calculator](#leap-year-and-days-in-month-calculator)
 
 
@@ -30,9 +29,6 @@ A guessing game where users compare two random entities to predict which has mor
 
 ## Coffee Machine
 A program that manages a coffee machine, checking ingredient availability, handling monetary transactions, and dispensing coffee.
-
-## Blind Auction
-
 
 ## Leap Year and Days in Month Calculator
 Determines if a year is a leap year and calculates the number of days in a given month for that year.
