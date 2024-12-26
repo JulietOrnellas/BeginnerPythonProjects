@@ -1,6 +1,6 @@
 # Beginner Python Projects
 
-A collection of beginner Python projects I worked on while learning the language.
+A collection of beginner Python projects I worked on while learning the language.  Each project highlights fundamental programming concepts and problem-solving skills. 
 
 ## Table of Contents
 - [Calculator](#calculator-program)
