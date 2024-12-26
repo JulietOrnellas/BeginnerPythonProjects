@@ -3,32 +3,37 @@
 A collection of beginner Python projects I worked on while learning the language.
 
 ## Table of Contents
+- [Calculator](#calculator-program)
 - [Secret Auction Game](#secret-auction-game)
 - [Blackjack Game](#blackjack-game)
 - [Guess the Number Game](#guess-the-number-game)
 - [Higher Lower Game](#higher-lower-game)
 - [Coffee Machine](#coffee-machine)
 - [Blind Auction](#blind-auction)
-- [Days in Specific Month](#days-in-specific-month)
+- [Leap Years and Days in Month Calculator](#leap-year-and-days-in-month-calculator)
+
+
+## Calculator Program
+A basic calculator that performs addition, subtraction, multiplication, and division, with the ability to continue calculations using the previous result.
 
 ## Secret Auction Game
-This project simulates a basic calculator that performs addition, subtraction, multiplication, and division.
+A bidding system that stores bids, allows multiple participants, and determines the highest bidder.
 
 ## Blackjack Game
-A fun game where the player has to guess a randomly generated number within a certain range.
+
 
 ## Guess the Number Game
-A simple CLI-based to-do list application for tracking daily tasks.
+
 
 ## Higher Lower Game
-This project simulates a basic calculator that performs addition, subtraction, multiplication, and division.
+A guessing game where users compare two random entities to predict which has more X followers, using a pre-defined data set.
 
 ## Coffee Machine
-A fun game where the player has to guess a randomly generated number within a certain range.
+A program that manages a coffee machine, checking ingredient availability, handling monetary transactions, and dispensing coffee.
 
 ## Blind Auction
-A simple CLI-based to-do list application for tracking daily tasks.
 
-## Days in Specific Month
-A simple CLI-based to-do list application for tracking daily tasks.
+
+## Leap Year and Days in Month Calculator
+Determines if a year is a leap year and calculates the number of days in a given month for that year.
 
