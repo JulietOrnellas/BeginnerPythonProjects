@@ -44,7 +44,7 @@ A bidding system that stores bids, allows multiple participants, and determines 
 
 Example:
 ```bash
-python guess_the_number.py
+python coffee.py
 
 
 
