@@ -23,7 +23,7 @@ A bidding system that stores bids, allows multiple participants, and determines 
 
 
 ## Guess the Number Game
-
+A number-guessing game where the user guesses a random number (1-100) with limited attempts based on difficulty.
 
 ## Higher Lower Game
 A guessing game where users compare two random entities to predict which has more X followers, using a pre-defined data set.
