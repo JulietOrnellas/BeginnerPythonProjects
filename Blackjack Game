@@ -1,4 +1,3 @@
-############### Blackjack Project #####################
 
 import random
 from replit import clear
