@@ -20,7 +20,7 @@ A basic calculator that performs addition, subtraction, multiplication, and divi
 A bidding system that stores bids, allows multiple participants, and determines the highest bidder.
 
 ## Blackjack Game
-
+A simple Blackjack game where the player competes against the computer.
 
 ## Guess the Number Game
 A number-guessing game where the user guesses a random number (1-100) with limited attempts based on difficulty.
