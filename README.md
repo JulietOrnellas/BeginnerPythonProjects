@@ -4,6 +4,7 @@ A collection of beginner Python projects I worked on while learning the language
 
 ## Table of Contents
 - [Blackjack Game](#blackjack-game)
+- [Caesar Cipher](#caesar-cipher)
 - [Calculator](#calculator-program)
 - [Coffee Machine](#coffee-machine)
 - [Guess the Number Game](#guess-the-number-game)
@@ -16,6 +17,10 @@ A collection of beginner Python projects I worked on while learning the language
 
 ## Blackjack Game
 A simple Blackjack game where the player competes against the computer.
+
+
+## Caesar Cipher
+A simple program that allows the user to encrypt or decrypt text by shifting letters in the alphabet by a specified amount, repeatedly prompting the user for input until they choose to exit.
 
 ## Calculator Program
 A basic calculator that performs addition, subtraction, multiplication, and division, with the ability to continue calculations using the previous result.
