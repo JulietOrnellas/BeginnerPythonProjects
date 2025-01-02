@@ -8,7 +8,6 @@ A collection of beginner Python projects I worked on while learning the language
 - [Calculator](#calculator-program)
 - [Coffee Machine](#coffee-machine)
 - [Guess the Number Game](#guess-the-number-game)
-- [Hangman-Game](#hangman)
 - [Higher Lower Game](#higher-lower-game)
 - [Leap Years and Days in Month Calculator](#leap-year-and-days-in-month-calculator)
 - [Secret Auction Game](#secret-auction-game)
@@ -31,9 +30,6 @@ A program that manages a coffee machine, checking ingredient availability, handl
 
 ## Guess the Number Game
 A number-guessing game where the user guesses a random number (1-100) with limited attempts based on difficulty.
-
-## Hangman Game
-A classic game of hangman that demonstrates foundational concepts.
 
 ## Higher Lower Game
 A guessing game where users compare two random entities to predict which has more X followers, using a pre-defined data set.
